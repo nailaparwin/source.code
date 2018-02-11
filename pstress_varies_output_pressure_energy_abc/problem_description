@@ -1,0 +1,35 @@
+Sample INPUT
+===============
+This source code takes input four files. They are inside init folder.
+INCAR
+POSCAR
+POTCAR
+KPOINTS
+
+PROCESS 1
+==============
+1. PSTRESS is a variable in INCAR file
+2. Using sample input files we want to create multiple input files with different values of PSTRESS
+3. The values of PSTRESS should be 0, 5, 10, 15, 20, .....,100
+4. Create a new input folder for each value of PSTRESS like files_0, files_5, files_10 and so on
+5. only PSTRESS value is different in each INCAR file. Rest of the files are same in all folders. copied only
+6. "run" is shell script to prepare input files
+7. we can execute this file using ./run on command prompt
+8. This shell script will also run the simulation on vasp using 16 cores and produce OUTCAR files
+
+PROCESS 2
+=====================
+1. After creating and running all simulations consider OUTCAR files from all folders
+2 Create an excel sheet having values of positions of atoms(a, b, c), energy (toten) and external pressure
+for each outcar file using python script "extract_info.py" 
+3. Take the last entry from each excel file and write into a new excel file pstress_0_100.xlsx. This is the target 
+output file
+
+OUTPUT
+==========
+pstress_0_100.xlsx
+
+Source Code
+============
+1) run => This is a shell script to prepare input folders and run all simulations on vasp
+2) extract_info.py => This is a python script to create all individual excel files.
