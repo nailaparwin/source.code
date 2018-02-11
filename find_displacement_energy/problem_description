@@ -12,7 +12,7 @@ Process
 ---------
 1. run all vasp simulations using script run_dir_with_points.sh
 2. copy all outcar files in a separate folder (optional not compulsory step) using script cp.sh
-3. find out energy values using python script extract_info.py
+3. find out energy values using python script extract_info_plus.py and extract_info_minus.py
 
 Output
 ---------
