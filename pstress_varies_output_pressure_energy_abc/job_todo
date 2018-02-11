@@ -1,0 +1,19 @@
+vasp job
+===================
+change PSTRESS parameter in INCAR file. provide values 0, 5, 10, 15 .... 100 like PSTRESS = 0 and run vasp when completes. set PSTRESS = 5 and run vasp ....
+
+write script to perform above tasks.
+(I have deleted PSTRESS from original file to make task easy)
+There are three script files run, extract_info.py and final.py
+
+run will create input files and run them on vasp
+extract_info will analyse OUTCAR files and collect all values for energy, pressure and positions of atoms from each OUTCAR file
+finally final will extract the final entry of energy, pressure and positions of atoms from all excel files and gathers in one excel file
+output required
+
+-----------------
+Output Required
+----------------
+a -- length of vectors
+E -- total energy TOTEN
+external pressure
