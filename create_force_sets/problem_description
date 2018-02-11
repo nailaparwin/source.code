@@ -1,0 +1,15 @@
+create a force_set file
+==========================
+
+input
+no. of cases e.g 40
+displacement file e.g. disp.yaml
+OUTCAR files (for 40 cases 40 OUTCAR files)
+
+process
+read data from displacement file
+read positions of atoms from outcar file (start from word POSITION and end on total drift)
+create a new file contains data from both files in specific order.
+
+output
+The name of output file is FORCE_SETS
