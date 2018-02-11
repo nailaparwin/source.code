@@ -1,0 +1,32 @@
+Task to do
+================
+Find Energy for a list of given displacement values
+
+Input
+-------
+we have folders named as -1,-0.9, -0.8, -0.7, ...,0,0.1, 0.2, 0.3,....0.9,1
+Each folder contains input vasp files to run
+The name of folders represents the displacement values
+
+Process
+---------
+1. run all vasp simulations using script run_dir_with_points.sh
+2. copy all outcar files in a separate folder (optional not compulsory step) using script cp.sh
+3. find out energy values using python script extract_info.py
+
+Output
+---------
+data.xlsx
+
+
+
+Details
+-------------------
+1. It will work in two steps. We have all negative named folders in one dir and all positive named folders in another dir.
+2. We have a list of displacement values from negative numbers to positive numbers
+3. To keep the order same in output file when we read negative folders the values go from folder 1 to 0.1 and 
+to read positive folders values go from 0,0.1 to 1
+4. There will be two output files. To make the final output file copy data from both files in a new file manually
+
+P.S. minus folder indicate negative folders. They does not contain negative sign actually
+
