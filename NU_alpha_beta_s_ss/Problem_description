@@ -1,0 +1,21 @@
+source code: 3files.py
+
+Task
+=======
+From the given outcar file delete extra rows. Take all alpha values as header rows. Take all beta values as header column. 
+consider only s(a,b) values and write them in a file. Then consider ss(a,b) values and write them in a separate file with 
+same header row and column. Make a third file for ss(a,-b) values with same headers.
+
+Input
+______
+N_in_UNnat_300K_output
+
+Process
+_________
+run python code 3files.py. it will create data files
+
+Output
+______
+output_N_in_UNnat_300K_output_s(a,b).csv
+output_N_in_UNnat_300K_output_ss(a,b).csv
+output_N_in_UNnat_300K_output_s(a,-b).csv
