@@ -1,0 +1,24 @@
+prepare vasp input files by changing x and y values in poscar at line 36 (atom position 29). 
+the value of x range 0.40, 0.42, 0.44, ...to 0.60 similarly value of y for each value of x range 
+from 0.40, 0.42 to 0.60. something like this
+
+0.40 0.40
+0.40 0.42
+0.40 0.44
+0.40 0.46
+0.40 0.48
+..
+..
+0.40 0.60
+0.42 0.40
+0.42 0.42
+..
+0.42 0.60
+..
+..
+0.60 0.60
+
+so there will be total 121 jobs to run. script code.py does this. It creates 121 jobs to run.
+
+all run* bash script are used to automate the jobs on different machines. They all are same.
+Only the difference is in folder names to run and no. of iterations
