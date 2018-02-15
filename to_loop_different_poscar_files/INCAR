@@ -1,0 +1,32 @@
+# SCF input for VASP
+# Note that VASP uses the FIRST occurence of a keyword
+SYSTEM = NU_64_Atoms_N_Disp_0.01A
+
+    PREC = Accurate
+   ENCUT = 600
+  IBRION = -1
+     NSW = 0
+    ISIF = 2
+  NELMIN = 2
+   EDIFF = 1.0e-06
+  EDIFFG = -0.02
+ VOSKOWN = 1
+  NBLOCK = 1
+  NWRITE = 1
+    NELM = 60
+    ALGO = Normal (blocked Davidson)
+   ISPIN = 2
+MAGMOM = 32*-0.061 32*1.236
+  INIWAV = 1
+  ISTART = 0
+  ICHARG = 2
+   LWAVE = .FALSE.
+  LCHARG = .FALSE.
+ ADDGRID = .FALSE.
+  ISMEAR = 1
+   SIGMA = 0.2
+   LREAL = .FALSE.
+RWIGS = 0.75 1.42
+
+# Default options for parallel
+    NPAR = 16

@@ -1,0 +1,33 @@
+#!/bin/bash
+
+#start=1
+#stop=6
+#counter=0.40
+#----------------------------
+#set parameters
+#----------------------------
+start=1
+stop=3
+counter=0.56
+#-----------------------------
+subcounter=0.40
+in_stop=11
+in_start=1
+while [  $start -le $stop ]; do
+    while [  $in_start -le $in_stop ]; do
+        drname=$counter"_"$subcounter
+        cd $drname
+        #______________________________________________________
+        #please change no. of cores and path of vasp binary here
+        #_______________________________________________________
+        mpirun -np 32 /home/iyad/vasp.5.4.4/bin/vasp_std
+        #echo $drname
+        cd ../
+        subcounter=$(awk -v subno="$subcounter" 'BEGIN{printf "%.2f", subno+0.02}')
+        (( in_start=$in_start+1 ))
+    done
+    counter=$(awk -v counter="$counter" 'BEGIN{printf "%.2f", counter+0.02}')
+    (( start=$start+1 ))
+    in_start=1
+    subcounter=0.40
+done
